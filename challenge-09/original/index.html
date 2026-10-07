@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Northstar Dashboard</title>
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <header class="topbar">
+        <a class="brand" href="#overview" aria-label="Northstar home">
+          <span class="brand-mark" aria-hidden="true">N</span>
+          <span>Northstar</span>
+        </a>
+        <div class="topbar-actions">
+          <label class="search-field">
+            <span class="visually-hidden">Search dashboard</span>
+            <input type="search" placeholder="Search anything..." />
+          </label>
+          <button class="icon-button" type="button" aria-label="Notifications">3</button>
+          <div class="user-profile">
+            <span class="avatar" aria-hidden="true">AC</span>
+            <span class="user-name">Alex Chen</span>
+          </div>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Main navigation">
+          <p class="sidebar-label">WORKSPACE</p>
+          <nav class="sidebar-nav">
+            <a class="nav-link nav-link-active" href="#overview">Overview</a>
+            <a class="nav-link" href="#projects">Projects</a>
+            <a class="nav-link" href="#reports">Reports</a>
+            <a class="nav-link" href="#team">Team</a>
+          </nav>
+          <p class="sidebar-label sidebar-label-bottom">SAVED VIEWS</p>
+          <nav class="sidebar-nav">
+            <a class="nav-link" href="#recent">Recent activity</a>
+            <a class="nav-link" href="#favorites">Favorites</a>
+          </nav>
+        </aside>
+
+        <main class="main-content" id="overview">
+          <div class="page-heading">
+            <div>
+              <p class="eyebrow">MONDAY, OCTOBER 14, 2026</p>
+              <h1>Overview</h1>
+            </div>
+            <button class="primary-button" type="button">Download report</button>
+          </div>
+
+          <section class="stats-grid" aria-label="Workspace summary">
+            <article class="stat-card">
+              <p class="stat-label">Total projects</p>
+              <p class="stat-value">24</p>
+              <p class="stat-note">+12% from last month</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Active tasks</p>
+              <p class="stat-value">186</p>
+              <p class="stat-note">Across 8 teams</p>
+            </article>
+            <article class="stat-card">
+              <p class="stat-label">Completion rate</p>
+              <p class="stat-value">78%</p>
+              <p class="stat-note">+4.6% from last month</p>
+            </article>
+          </section>
+
+          <section class="dashboard-grid" aria-label="Project activity">
+            <article class="panel activity-panel">
+              <div class="panel-heading">
+                <div>
+                  <h2>Project activity</h2>
+                  <p>Updates from your workspace</p>
+                </div>
+                <button class="text-button" type="button">This week</button>
+              </div>
+              <div class="activity-row">
+                <span class="activity-dot dot-blue"></span>
+                <div class="activity-copy">
+                  <strong>Website redesign</strong><span>Milestone completed by Design</span>
+                </div>
+                <time datetime="2026-10-14">2h ago</time>
+              </div>
+              <div class="activity-row">
+                <span class="activity-dot dot-green"></span>
+                <div class="activity-copy">
+                  <strong>Mobile app launch</strong><span>3 new tasks were added</span>
+                </div>
+                <time datetime="2026-10-14">5h ago</time>
+              </div>
+              <div class="activity-row">
+                <span class="activity-dot dot-orange"></span>
+                <div class="activity-copy">
+                  <strong>Q4 planning</strong><span>Review requested by Alex Chen</span>
+                </div>
+                <time datetime="2026-10-13">Yesterday</time>
+              </div>
+            </article>
+
+            <article class="panel team-panel">
+              <div class="panel-heading">
+                <div>
+                  <h2>Team progress</h2>
+                  <p>Tasks completed this week</p>
+                </div>
+              </div>
+              <div class="progress-item">
+                <div><span>Design</span><strong>84%</strong></div>
+                <div class="progress-track"><span style="width: 84%"></span></div>
+              </div>
+              <div class="progress-item">
+                <div><span>Engineering</span><strong>68%</strong></div>
+                <div class="progress-track"><span style="width: 68%"></span></div>
+              </div>
+              <div class="progress-item">
+                <div><span>Marketing</span><strong>92%</strong></div>
+                <div class="progress-track"><span style="width: 92%"></span></div>
+              </div>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

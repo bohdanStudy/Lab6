@@ -1,0 +1,73 @@
+/* Challenge 10. Final Responsive Component.
+   Обов'язково: Grid, Flexbox, minmax()/auto-fit, clamp(), Container Query.
+   Ваш CSS — тут. */
+
+.feature-section {
+  width: min(100% - 2rem, 75rem);
+  margin-inline: auto;
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.feature-section > h2 {
+  max-width: 24ch;
+  margin-inline: auto;
+  font-size: clamp(2rem, calc(1.4rem + 2vw), 3rem);
+  text-align: center;
+}
+
+.feature-section > p {
+  max-width: 60ch;
+  margin-inline: auto;
+  color: var(--muted);
+  text-align: center;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-block-start: clamp(2rem, 4vw, 3rem);
+}
+
+.feature {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  container: feature / inline-size;
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+}
+
+.feature p {
+  color: var(--muted);
+}
+
+.feature a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-block-start: auto;
+  padding-inline: 0.75rem;
+  border-radius: 6px;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.feature a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+@container feature (min-width: 19.5rem) {
+  .feature a {
+    align-self: flex-end;
+  }
+}
